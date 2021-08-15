@@ -253,8 +253,8 @@ class ElectronTWEEN {
             .SetEasing(opts.easing)
             .OnUpdate((pos) => {
                 // ensure all positions are rounded to integers and >= 0
-                pos.x = Math.max(Math.round(pos.x), 0);
-                pos.y = Math.max(Math.round(pos.y), 0);
+                pos.x = Math.round(pos.x);
+                pos.y = Math.round(pos.y);
                 opts.win.setBounds({ x: pos.x, y: pos.y });
             });
 
